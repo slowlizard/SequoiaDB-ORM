@@ -1,4 +1,4 @@
-package org.squoia.orm.base;
+package org.sketch.orm.base;
 
 import java.util.Map;
 

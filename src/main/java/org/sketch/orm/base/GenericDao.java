@@ -1,4 +1,4 @@
-package org.squoia.orm.base;
+package org.sketch.orm.base;
 
 import java.beans.IntrospectionException;
 import java.lang.reflect.InvocationTargetException;
@@ -14,9 +14,9 @@ import javax.annotation.PostConstruct;
 import org.bson.BSONObject;
 import org.bson.BasicBSONObject;
 import org.bson.types.BasicBSONList;
-import org.sequoia.orm.annotation.Collection;
-import org.sequoia.orm.annotation.PrimaryKey;
-import org.sequoia.orm.annotation.Space;
+import org.sketch.orm.annotation.Collection;
+import org.sketch.orm.annotation.PrimaryKey;
+import org.sketch.orm.annotation.Space;
 
 
 

@@ -1,4 +1,4 @@
-package org.squoia.orm.base;
+package org.sketch.orm.base;
 
 public class CommEncode {
 

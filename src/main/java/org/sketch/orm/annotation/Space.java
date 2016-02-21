@@ -1,4 +1,4 @@
-package org.sequoia.orm.annotation;
+package org.sketch.orm.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

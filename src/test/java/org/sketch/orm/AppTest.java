@@ -1,4 +1,4 @@
-package org.sequoia.orm;
+package org.sketch.orm;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

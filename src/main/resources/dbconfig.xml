@@ -19,7 +19,7 @@
 			</list>
 		</constructor-arg>
 		<constructor-arg name="username" value="sdbadmin"></constructor-arg>
-		<constructor-arg name="password" value="Swim1234567@"></constructor-arg>
+		<constructor-arg name="password" value="sdbadmin"></constructor-arg>
 		<constructor-arg name="nwOpt">
 			<bean class="com.sequoiadb.net.ConfigOptions">
 				<property name="connectTimeout" value="500"></property>
