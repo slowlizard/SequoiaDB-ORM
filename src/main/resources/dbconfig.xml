@@ -15,7 +15,7 @@
 	<bean id="dataSource" class="com.sequoiadb.base.SequoiadbDatasource">
 		<constructor-arg name="urls">
 			<list>
-				<value>123.56.190.233:11810</value>
+				<value>localhost:11810</value>
 			</list>
 		</constructor-arg>
 		<constructor-arg name="username" value="sdbadmin"></constructor-arg>
