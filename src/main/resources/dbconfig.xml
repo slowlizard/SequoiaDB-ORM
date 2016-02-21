@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.2.xsd">
+	<context:annotation-config />
+	<context:component-scan base-package="org.sequoia.*" />
+	<!-- 设置数据库配置 -->
+	<bean id="dataSource" class="com.sequoiadb.base.SequoiadbDatasource">
+		<constructor-arg name="urls">
+			<list>
+				<value>123.56.190.233:11810</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg name="username" value="sdbadmin"></constructor-arg>
+		<constructor-arg name="password" value="Swim1234567@"></constructor-arg>
+		<constructor-arg name="nwOpt">
+			<bean class="com.sequoiadb.net.ConfigOptions">
+				<property name="connectTimeout" value="500"></property>
+				<property name="maxAutoConnectRetryTime" value="5"></property>
+			</bean>
+		</constructor-arg>
+		<constructor-arg name="dsOpt">
+			<bean class="com.sequoiadb.base.SequoiadbOption">
+				<property name="initConnectionNum" value="1"></property>
+				<property name="maxConnectionNum" value="1000"></property>
+				<property name="timeout" value="1000"></property>
+				<property name="abandonTime" value="600000"></property>
+				<property name="recheckCyclePeriod" value="60000"></property>
+			</bean>
+		</constructor-arg>
+	</bean>
+</beans>
